@@ -1,15 +1,26 @@
 <html>
 	<head>
-		<title>
-			AUTENTICANT AMB LDAP DE L'USUARI admin
-		</title>
+		<title>AUTENTICANT AMB LDAP DE L'USUARI admin</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	</head>
 	<body>
-		<form action="http://zend-jupela.fjeclot.net/autent/auth.php" method="POST">
-			Usuari amb permisos d'administració LDAP: <input type="text" name="adm"><br>
-			Contrasenya de l'usuari: <input type="password" name="cts"><br>
-			<input type="submit" value="Envia" />
-			<input type="reset" value="Neteja" />
-		</form>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<form action="auth.php" method="POST">
+						<div class="form-group">
+							<label for="adm">Usuari amb permisos d'administració LDAP:</label>
+							<input type="text" class="form-control" id="adm" name="adm">
+						</div>
+						<div class="form-group">
+							<label for="cts">Contrasenya de l'usuari:</label>
+							<input type="password" class="form-control" id="cts" name="cts">
+						</div>
+						<button type="submit" class="btn btn-primary">Envia</button>
+						<button type="reset" class="btn btn-default">Neteja</button>
+					</form>
+				 </div>
+			</div>
+		</div>
 	</body>
 </html>

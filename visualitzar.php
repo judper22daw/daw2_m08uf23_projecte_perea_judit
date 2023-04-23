@@ -24,17 +24,29 @@ if ($_GET['usr'] && $_GET['ou']){
 ?>
 <html>
 <head>
-<title>
-MOSTRANT DADES D'USUARIS DE LA BASE DE DADES LDAP
-</title>
+<title>MOSTRANT DADES D'USUARIS DE LA BASE DE DADES LDAP</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<h2>Formulari de selecció d'usuari</h2>
-<form action="visualitzar.php" method="GET">
-Unitat organitzativa: <input type="text" name="ou"><br>
-Usuari: <input type="text" name="usr"><br>
-<input type="submit"/>
-<input type="reset"/>
-</form>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h2>Formulari de selecció d'usuari</h2>
+				<form action="visualitzar.php" method="GET">
+					<div class="form-group">
+						<label for="ou">Unitat organitzativa:</label>
+						<input type="text" class="form-control" id="ou" name="ou">
+					</div>
+					<div class="form-group">
+						<label for="usr">Usuari:</label>
+						<input type="text" class="form-control" id="usr" name="usr">
+					</div>
+					<button type="submit" class="btn btn-primary">Enviar</button>
+					<button type="reset" class="btn btn-default">Resetear</button>
+                    <button type="button" onclick="location.href='./menu.php'" class="btn btn-info">Torna menú</button>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

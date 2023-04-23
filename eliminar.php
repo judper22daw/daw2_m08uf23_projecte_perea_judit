@@ -40,17 +40,29 @@
 ?>
 <html>
 <head>
-<title>
-ELIMINADOR D'USUARIS LDAP
-</title>
+<title>ELIMINADOR D'USUARIS LDAP</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<h2>Formulari d'eliminacio d'usuaris</h2>
-<form action="eliminar.php" method="POST">
-UID: <input type="text" name="uid"><br>
-Unitat organitzativa: <input type="text" name="uo"><br>
-<input type="submit"/>
-<input type="reset"/>
-</form>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h2>Formulari d'eliminació d'usuaris</h2>
+				<form action="eliminar.php" method="POST">
+					<div class="form-group">
+						<label for="uid">UID:</label>
+						<input type="text" class="form-control" id="uid" name="uid">
+					</div>
+					<div class="form-group">
+						<label for="uo">Unitat organitzativa:</label>
+						<input type="text" class="form-control" id="uo" name="uo">
+					</div>
+					<button type="submit" class="btn btn-danger">Eliminar</button>
+					<button type="reset" class="btn btn-default">Resetear</button>
+					<button type="button" onclick="location.href='./menu.php'" class="btn btn-info">Torna menú</button>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

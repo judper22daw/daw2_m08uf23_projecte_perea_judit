@@ -64,29 +64,84 @@
 ?>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <title>
 CREADOR D'USUARIS LDAP
 </title>
 </head>
 <body>
-<h2>Formulari de creació d'usuaris</h2>
-<form action="crear.php" method="POST">
-UID: <input type="text" name="uid"><br>
-Unitat organitzativa: <input type="text" name="uo"><br>
-uidNumber: <input type="number" name="uidNumber"><br>
-gidNumber: <input type="number" name="gidNumber"><br>
-dir_pers: <input type="text" name="directoriPersonal"><br>
-Shell: <input type="text" name="shell"><br>
-cn: <input type="text" name="cn"><br>
-sn: <input type="text" name="sn"><br>
-nom: <input type="text" name="givenName"><br>
-mobil: <input type="text" name="mobile"><br>
-adressa: <input type="text" name="postalAdress"><br>
-telefon: <input type="text" name="telephoneNumber"><br>
-titol: <input type="text" name="title"><br>
-descripcio: <input type="text" name="description"><br>
-<input type="submit"/>
-<input type="reset"/>
-</form>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>CREADOR D'USUARIS LDAP</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-4 mb-4">Formulari de creació d'usuaris</h2>
+        <form action="crear.php" method="POST">
+            <div class="form-group">
+                <label for="uid">Nom d'usuari (UID):</label>
+                <input type="text" class="form-control" id="uid" name="uid" placeholder="exemple1" required>
+            </div>
+            <div class="form-group">
+                <label for="uo">Unitat organitzativa:</label>
+                <input type="text" class="form-control" id="uo" name="uo" placeholder="exemples" required>
+            </div>
+            <div class="form-group">
+                <label for="uidNumber">Número d'UID:</label>
+                <input type="number" class="form-control" id="uidNumber" name="uidNumber" placeholder="1000" required>
+            </div>
+            <div class="form-group">
+                <label for="gidNumber">GIDNumber:</label>
+                <input type="number" class="form-control" id="gidNumber" name="gidNumber" placeholder="100" required>
+            </div>
+            <div class="form-group">
+                <label for="directoriPersonal">Directori personal:</label>
+                <input type="text" class="form-control" id="directoriPersonal" name="directoriPersonal" placeholder="/home/exemple1" required>
+            </div>
+            <div class="form-group">
+                <label for="shell">Shell:</label>
+                <input type="text" class="form-control" id="shell" name="shell">
+            </div>
+            <div class="form-group">
+                <label for="cn">Nom complet:</label>
+                <input type="text" class="form-control" id="cn" name="cn" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="sn">Cognom:</label>
+                <input type="text" class="form-control" id="sn" name="sn" placeholder="Doe" required>
+            </div>
+			<div class="form-group">
+                <label for="givenName">Nom de pila:</label>
+                <input type="text" class="form-control" id="givenName" name="givenName" placeholder="John" required>
+            </div>
+			<div class="form-group">
+                <label for="mobile">Mòbil:</label>
+                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="6XXXXXXXX" required>
+            </div>
+			<div class="form-group">
+                <label for="postalAdress">Adreça:</label>
+                <input type="text" class="form-control" id="postalAdress" name="postalAdress" placeholder="C/Exemple 33" required>
+            </div>
+			<div class="form-group">
+                <label for="telephoneNumber">Telefon:</label>
+                <input type="text" class="form-control" id="telephoneNumber" name="telephoneNumber" placeholder="9XXXXXXXX" required>
+            </div>
+			<div class="form-group">
+                <label for="title">Titol:</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="p.e. Informàtic" required>
+            </div>
+			<div class="form-group">
+                <label for="description">Descripció:</label>
+                <input type="text" class="form-control" id="description" name="description" placeholder="Exemple" required>
+            </div>
+			<input type="submit" class="btn btn-primary" value="Enviar">
+			<input type="reset" class="btn btn-secondary" value="Resetejar">
+			<button class="btn btn-info" onclick="window.location.href='menu.php'">Torna al menú</button>
+		</form>
+	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>

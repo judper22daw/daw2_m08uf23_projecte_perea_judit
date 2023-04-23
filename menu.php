@@ -1,14 +1,18 @@
 <html>
 <head>
-<title>
-MOSTRANT DADES D'USUARIS DE LA BASE DE DADES LDAP
-</title>
+<title>MOSTRANT DADES D'USUARIS DE LA BASE DE DADES LDAP</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
-<h2>Accions</h2>
-<a href="visualitzar.php"> Visualitza Usuaris</a>
-<a href="crear.php"> Crea Usuaris</a>
-<a href="eliminar.php"> Eliminar Usuaris</a>
-<a href="modificar.php"> Modificar Usuaris</a>
+<body class="text-center">
+  <h1>MENÚ</h1>
+  <div class="d-flex flex-column">
+    <button class="btn btn-primary my-1" onclick="window.location.href='visualitzar.php'" style="width: 200px;margin-left: 45%;" >Visualitza Usuaris</button>
+    <button class="btn btn-primary my-1" onclick="window.location.href='crear.php'" style="width: 200px;margin-left: 45%;">Crea Usuaris</button>
+    <button class="btn btn-primary my-1" onclick="window.location.href='eliminar.php'"style="width: 200px;margin-left: 45%;">Eliminar Usuaris</button>
+    <button class="btn btn-primary my-1" onclick="window.location.href='modificar.php'"style="width: 200px;margin-left: 45%;">Modificar Usuaris</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

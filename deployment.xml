@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <package xmlns="http://www.zend.com/server/deployment-descriptor/1.0" version="1.0">
-    <name>autentjupela</name>
+    <name>daw2_m08uf23_projecte_perea_judit-main</name>
     <summary>autenticació LDAP</summary>
     <version>
         <release>1.0.9</release>

@@ -42,45 +42,56 @@
 	} else echo "<b>Aquesta entrada no existeix</b><br><br>";
 	}
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>
-MODIFICADOR D'USUARIS LDAP
-</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <title>MODIFICADOR D'USUARIS LDAP</title>
 </head>
 <body>
-<h2>Formulari d'eliminacio d'usuaris</h2>
-<form action="modificar.php" method="POST">
-UID: <input type="text" name="uid"><br>
-Unitat organitzativa: <input type="text" name="uo"><br>
-<input type="radio" id="uidNumber" name="atribut" value="uidNumber">
-<label>uid Number</label>
-<input type="radio" id="gidNumber" name="atribut" value="gidNumber">
-<label>gid Number</label>
-<input type="radio" id="directoriPersonal" name="atribut" value="homeDirectory">
-<label>Directori Personal</label>
-<input type="radio" id="Shell" name="atribut" value="loginShell">
-<label>Shell</label>
-<input type="radio" id="cn" name="atribut" value="cn">
-<label>cn</label>
-<input type="radio" id="sn" name="atribut" value="sn">
-<label>sn</label>
-<input type="radio" id="givenName" name="atribut" value="givenName">
-<label>givenName</label>
-<input type="radio" id="PostalAdress" name="atribut" value="postalAddress">
-<label>PostalAdress</label>
-<input type="radio" id="mobile" name="atribut" value="mobile">
-<label>mobile</label>
-<input type="radio" id="telephoneNumber" name="atribut" value="telephoneNumber">
-<label>telephoneNumber</label>
-<input type="radio" id="title" name="atribut" value="title">
-<label>title</label>
-<input type="radio" id="description" name="atribut" value="description">
-<label>description</label>
-<br>
-Nova Dada: <input type="text" name="novaDada"><br>
-<input type="submit"/>
-<input type="reset"/>
-</form>
+    <div class="container mt-3">
+        <h2 class="mb-3">Formulari d'eliminació d'usuaris</h2>
+        <form action="modificar.php" method="POST">
+            <div class="mb-3">
+                <label for="uid" class="form-label">UID:</label>
+                <input type="text" class="form-control" name="uid" id="uid">
+            </div>
+            <div class="mb-3">
+                <label for="uo" class="form-label">Unitat organitzativa:</label>
+                <input type="text" class="form-control" name="uo" id="uo">
+            </div>
+            <div class="mb-3">
+                <label for="atribut" class="form-label">Atribut:</label>
+                <select class="form-select" name="atribut" id="atribut">
+                    <option value="uidNumber">uid Number</option>
+                    <option value="gidNumber">gid Number</option>
+                    <option value="homeDirectory">Directori Personal</option>
+                    <option value="loginShell">Shell</option>
+                    <option value="cn">cn</option>
+                    <option value="sn">sn</option>
+                    <option value="givenName">givenName</option>
+                    <option value="postalAddress">PostalAdress</option>
+                    <option value="mobile">mobile</option>
+                    <option value="telephoneNumber">telephoneNumber</option>
+                    <option value="title">title</option>
+                    <option value="description">description</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="novaDada" class="form-label">Nova Dada:</label>
+                <input type="text" class="form-control" name="novaDada" id="novaDada">
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary" value="Modificar">
+                <input type="reset" class="btn btn-secondary" value="Netejar">
+				<button type="button" onclick="location.href='./menu.php'" class="btn btn-info">Torna menú</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
